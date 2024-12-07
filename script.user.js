@@ -2,7 +2,7 @@
 // @name         Add DumpChatState Button
 // @namespace    flare
 // @match        https://www.torn.com/*
-// @version      1.5
+// @version      1.6
 // @description  Adds a button at the bottom of the page to execute window.dumpchatstate()
 // @author       flare
 // @grant        none
@@ -13,14 +13,20 @@
 
     // Wait for the page to fully load
     window.addEventListener('load', () => {
+        // Check if the button already exists
+        if (document.getElementById('dumpChatStateButton')) {
+            return; // Exit if the button already exists
+        }
+
         // Create a container div for the button
         const container = document.createElement('div');
         container.style.textAlign = 'center'; // Center the button horizontally
         container.style.margin = '20px 0';   // Add spacing above the button
-        container.style.paddingBottom = '20px'; // Add padding below the button
+        container.style.paddingBottom = '100px'; // Add padding below the button
 
         // Create a button
         const button = document.createElement('button');
+        button.id = 'dumpChatStateButton';  // Set a unique ID for the button to prevent duplicates
         button.textContent = 'Dump Chat State';
         button.style.padding = '10px 20px';
         button.style.backgroundColor = '#007BFF';
@@ -45,7 +51,7 @@
         button.addEventListener('click', () => {
             console.log('Executing window.dumpchatstate()...');
             if (typeof window.dumpChatState === 'function') {
-                window.dumpChatState();
+                //window.dumpChatState();
                 console.log('Success: dumpChatState executed.');
             } else {
                 console.log('Error: dumpChatState function not found.');
