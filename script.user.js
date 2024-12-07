@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         Add DumpChatState Button
-// @match        https://torn.com/
+// @namespace    flare
+// @match        https://www.torn.com/*
 // @version      1.1
 // @description  Adds a button to the bottom-left of the page to execute window.dumpchatstate()
 // @author       flare
