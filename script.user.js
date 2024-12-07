@@ -51,7 +51,7 @@
         button.addEventListener('click', () => {
             console.log('Executing window.dumpchatstate()...');
             if (typeof window.dumpChatState === 'function') {
-                //window.dumpChatState();
+                window.dumpChatState();
                 console.log('Success: dumpChatState executed.');
             } else {
                 console.log('Error: dumpChatState function not found.');
