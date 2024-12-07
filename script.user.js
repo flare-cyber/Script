@@ -2,7 +2,7 @@
 // @name         Add DumpChatState Button
 // @namespace    flare
 // @match        https://www.torn.com/*
-// @version      1.1
+// @version      1.2
 // @description  Adds a button to the bottom-left of the page to execute window.dumpchatstate()
 // @author       flare
 // @grant        none
